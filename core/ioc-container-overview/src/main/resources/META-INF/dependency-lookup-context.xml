@@ -7,6 +7,16 @@
     <bean id="user" class="cn.beichenhpy.domain.User">
         <property name="id" value="1"/>
         <property name="name" value="测试"/>
+        <property name="city" value="BEIJING"/>
+        <property name="configLocation" value="classpath:/META-INF/user-config.properties"/>
+        <property name="workCities">
+            <list>
+                <value>BEIJING</value>
+                <value>SHANGHAI</value>
+                <value>GUANGDONG</value>
+            </list>
+        </property>
+        <property name="loveCities" value="BEIJING,SHANGHAI"/>
     </bean>
 
     <bean id="superUser" class="cn.beichenhpy.domain.SuperUser" parent="user" primary="true">

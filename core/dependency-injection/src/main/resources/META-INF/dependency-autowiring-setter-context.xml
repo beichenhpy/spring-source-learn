@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="dependency-lookup-context.xml"/>
+
+    <bean id="userHolderByName" class="cn.beichenhpy.dependency.injection.UserHolder" autowire="byName">
+<!--        <property name="user" ref="superUser"/> 替换成autowiring-->
+    </bean>
+
+    <bean id="userHolderByType" class="cn.beichenhpy.dependency.injection.UserHolder" autowire="byType">
+        <!--        <property name="user" ref="superUser"/> 替换成autowiring 因为superUser使用了primary所以能注入-->
+    </bean>
+</beans>

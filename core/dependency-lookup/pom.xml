@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-bean</artifactId>
+    <artifactId>dependency-lookup</artifactId>
 
     <dependencies>
         <dependency>
@@ -17,11 +17,6 @@
             <artifactId>ioc-container-overview</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
-        <dependency>
-            <groupId>javax.annotation</groupId>
-            <artifactId>javax.annotation-api</artifactId>
-        </dependency>
-
     </dependencies>
+
 </project>
