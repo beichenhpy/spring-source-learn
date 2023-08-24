@@ -1,13 +1,16 @@
 package cn.beichenhpy.domain;
 
 import cn.beichenhpy.enums.CityEnum;
+import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.core.io.Resource;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class User {
+public class User implements BeanNameAware {
     private Integer id;
 
     private String name;
@@ -17,6 +20,8 @@ public class User {
     private CityEnum city;
 
     private CityEnum[] loveCities;
+
+    private transient String beanName;
 
     public List<CityEnum> getWorkCities() {
         return workCities;
@@ -96,5 +101,22 @@ public class User {
     protected void finalize() throws Throwable {
         super.finalize();
         System.out.println("当前对象正在被gc。。。");
+    }
+
+
+    @PostConstruct
+    public void init() {
+        System.out.println(this.beanName + "对象正在初始化...");
+    }
+
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println(this.beanName + "对象正在销毁...");
+    }
+
+    @Override
+    public void setBeanName(String name) {
+        this.beanName = name;
     }
 }

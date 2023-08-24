@@ -13,6 +13,12 @@
         <module>spring-bean</module>
         <module>dependency-lookup</module>
         <module>dependency-injection</module>
+        <module>spring-dependency-source</module>
+        <module>bean-scope</module>
+        <module>bean-lifecycle</module>
+        <module>generic</module>
+        <module>spring-event</module>
+        <module>annotations</module>
     </modules>
 
 
@@ -27,6 +33,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
             <dependency>
                 <groupId>javax.annotation</groupId>
                 <artifactId>javax.annotation-api</artifactId>
