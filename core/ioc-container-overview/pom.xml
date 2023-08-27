@@ -10,5 +10,12 @@
     </parent>
 
     <artifactId>ioc-container-overview</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.9.19</version>
+        </dependency>
+    </dependencies>
 
 </project>

@@ -19,6 +19,8 @@
         <module>generic</module>
         <module>spring-event</module>
         <module>annotations</module>
+        <module>configuration-metadata</module>
+        <module>spring-aop-source</module>
     </modules>
 
 
@@ -52,10 +54,16 @@
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
         <dependency>
             <groupId>javax.annotation</groupId>
             <artifactId>javax.annotation-api</artifactId>
             <version>${javax.annotation.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.9.19</version>
         </dependency>
     </dependencies>
 
